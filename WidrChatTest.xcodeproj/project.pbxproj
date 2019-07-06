@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
+		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
+		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
 		10E288CA22CF74980094D434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288C922CF74980094D434 /* AppDelegate.swift */; };
 		10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288CB22CF74980094D434 /* ChatViewController.swift */; };
 		10E288CF22CF74980094D434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E288CD22CF74980094D434 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidrChatTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
+		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		10E288C622CF74980094D434 /* WidrChatTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidrChatTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E288C922CF74980094D434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10E288CB22CF74980094D434 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10D3FF0922D1084F00616019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10D3FF0722D106CB00616019 /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		10E288BD22CF74980094D434 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,7 @@
 				10E288F122D096470094D434 /* Coordinator.swift */,
 				10E288F722D0A9C00094D434 /* Models */,
 				10E288E022CF9EB70094D434 /* Scenes */,
+				10D3FF0922D1084F00616019 /* Views */,
 				10E288EB22D069520094D434 /* Cells */,
 				10E288E222CF9EDB0094D434 /* Resources */,
 				10E288D522CF749A0094D434 /* LaunchScreen.storyboard */,
@@ -107,6 +122,7 @@
 			children = (
 				10E288D322CF749A0094D434 /* Assets.xcassets */,
 				10E288E722D058790094D434 /* Colors.xcassets */,
+				10D3FF0522D0FAA400616019 /* Colors.swift */,
 				10E288E522D053820094D434 /* LocalizedStrings.strings */,
 			);
 			path = Resources;
@@ -125,6 +141,7 @@
 			children = (
 				10E288EC22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift */,
 				10E288ED22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib */,
+				10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */,
 			);
 			path = IncomingTextMessage;
 			sourceTree = "<group>";
@@ -228,6 +245,7 @@
 			files = (
 				10E288E822D058790094D434 /* Colors.xcassets in Resources */,
 				10E288EF22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib in Resources */,
+				10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */,
 				10E288E622D053820094D434 /* LocalizedStrings.strings in Resources */,
 				10E288D722CF749A0094D434 /* LaunchScreen.storyboard in Resources */,
 				10E288D422CF749A0094D434 /* Assets.xcassets in Resources */,
@@ -298,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E288F522D098DD0094D434 /* ChatModel.swift in Sources */,
+				10D3FF0622D0FAA400616019 /* Colors.swift in Sources */,
+				10D3FF0822D106CB00616019 /* GradientView.swift in Sources */,
 				10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */,
 				10E288EA22D05EE10094D434 /* Presenters.swift in Sources */,
 				10E288F222D096470094D434 /* Coordinator.swift in Sources */,

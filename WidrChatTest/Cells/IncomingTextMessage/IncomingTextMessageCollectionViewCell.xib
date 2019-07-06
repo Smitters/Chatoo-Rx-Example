@@ -21,10 +21,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6W-cx-vfC">
-                        <rect key="frame" x="8" y="2" width="175" height="51"/>
+                        <rect key="frame" x="8" y="2" width="298" height="51"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incoming message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-6c-p4e">
-                                <rect key="frame" x="15" y="8" width="152" height="35"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It would be nice to spend billions on schools and roads, but right now that money is desperately needed for political ads." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-6c-p4e">
+                                <rect key="frame" x="15" y="8" width="268" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -34,7 +34,7 @@
                             <constraint firstItem="LK9-6c-p4e" firstAttribute="leading" secondItem="b6W-cx-vfC" secondAttribute="leading" constant="15" id="5wk-Gd-Y3D"/>
                             <constraint firstItem="LK9-6c-p4e" firstAttribute="top" secondItem="b6W-cx-vfC" secondAttribute="top" constant="8" id="F9W-yr-gCR"/>
                             <constraint firstAttribute="bottom" secondItem="LK9-6c-p4e" secondAttribute="bottom" constant="8" id="GJb-iB-LSb"/>
-                            <constraint firstAttribute="trailing" secondItem="LK9-6c-p4e" secondAttribute="trailing" constant="8" id="zWj-KN-Mvx"/>
+                            <constraint firstAttribute="trailing" secondItem="LK9-6c-p4e" secondAttribute="trailing" constant="15" id="zWj-KN-Mvx"/>
                         </constraints>
                     </view>
                 </subviews>

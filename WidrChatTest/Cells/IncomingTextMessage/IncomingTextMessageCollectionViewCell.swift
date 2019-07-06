@@ -11,7 +11,7 @@ import UIKit
 class IncomingTextMessageCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet private weak var bubbleView: UIView!
+    @IBOutlet weak var bubbleView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

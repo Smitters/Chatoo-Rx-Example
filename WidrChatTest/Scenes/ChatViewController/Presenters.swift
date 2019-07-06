@@ -11,9 +11,14 @@ import UIKit
 
 class TextMessagePresenter: ChatItemPresenterProtocol {
     static func registerCells(_ collectionView: UICollectionView) {
-        let identifier = String(describing: IncomingTextMessageCollectionViewCell.self)
+        let incomingTextIdentifier = String(describing: IncomingTextMessageCollectionViewCell.self)
+        let textIdentifier = "TextMessageCollectionViewCell"
 
-        collectionView.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
+        collectionView.register(UINib(nibName: incomingTextIdentifier, bundle: nil),
+                                forCellWithReuseIdentifier: incomingTextIdentifier)
+
+        collectionView.register(UINib(nibName: textIdentifier, bundle: nil),
+                                forCellWithReuseIdentifier: textIdentifier)
     }
 
     private let message: Message
@@ -30,7 +35,7 @@ class TextMessagePresenter: ChatItemPresenterProtocol {
                        decorationAttributes: ChatItemDecorationAttributesProtocol?) -> CGFloat {
 
         if case .text(let text) = message.content {
-            let horizontalInsets: CGFloat = 85
+            let horizontalInsets: CGFloat = 90
             let textWidth = width - horizontalInsets
             let constraintRect = CGSize(width: textWidth, height: .greatestFiniteMagnitude)
             let boundingBox = text.boundingRect(with: constraintRect,
@@ -47,8 +52,11 @@ class TextMessagePresenter: ChatItemPresenterProtocol {
     }
 
     func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: IncomingTextMessageCollectionViewCell.self), for: indexPath)
-        return cell
+        if message.isIncoming {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: IncomingTextMessageCollectionViewCell.self), for: indexPath)
+        } else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "TextMessageCollectionViewCell", for: indexPath)
+        }
     }
 
     func configureCell(_ cell: UICollectionViewCell, decorationAttributes: ChatItemDecorationAttributesProtocol?) {
