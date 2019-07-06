@@ -12,20 +12,20 @@ DerivedData
 *.perspectivev3
 !default.perspectivev3
 .DS_Store
-WidrChatTest.xcodeproj/xcuserdata/*
 contents.xcworkspacedata
 IDEWorkspaceChecks.plist
-WidrChatTest.xcworkspace/xcuserdata
 
 ## Other
 *.xccheckout
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
+*.xcuserstate
+*.xcscheme
+*xcworkspace/xcuserdata/*
+*/xcuserdata/*
+xcuserdata/*
 
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
-
-*.xcuserstate
-*.xcscheme
