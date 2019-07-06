@@ -1,0 +1,35 @@
+PODS:
+  - Chatto (3.4.0)
+  - ChattoAdditions (3.4.0):
+    - Chatto
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - Chatto
+  - ChattoAdditions
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Chatto
+    - ChattoAdditions
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Chatto: c00cb1af4c57b797041ce77a115d4f535ec54991
+  ChattoAdditions: 24617c63386fbaf971f11514fdc748d37f66f093
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: b8e4429c9a9c74ce34137319252e97d319a26646
+
+COCOAPODS: 1.6.1

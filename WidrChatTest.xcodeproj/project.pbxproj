@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		10E288CA22CF74980094D434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288C922CF74980094D434 /* AppDelegate.swift */; };
-		10E288CC22CF74980094D434 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288CB22CF74980094D434 /* ViewController.swift */; };
+		10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288CB22CF74980094D434 /* ChatViewController.swift */; };
 		10E288CF22CF74980094D434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E288CD22CF74980094D434 /* Main.storyboard */; };
-		10E288D222CF74980094D434 /* WidrChatTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10E288D022CF74980094D434 /* WidrChatTest.xcdatamodeld */; };
 		10E288D422CF749A0094D434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E288D322CF749A0094D434 /* Assets.xcassets */; };
 		10E288D722CF749A0094D434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E288D522CF749A0094D434 /* LaunchScreen.storyboard */; };
+		10E288E422CFA0160094D434 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288E322CFA0160094D434 /* ChatDataSource.swift */; };
+		10E288E622D053820094D434 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E288E522D053820094D434 /* LocalizedStrings.strings */; };
+		10E288E822D058790094D434 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E288E722D058790094D434 /* Colors.xcassets */; };
+		10E288EA22D05EE10094D434 /* Presenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288E922D05EE10094D434 /* Presenters.swift */; };
+		10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288EC22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift */; };
+		10E288EF22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E288ED22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib */; };
+		10E288F222D096470094D434 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288F122D096470094D434 /* Coordinator.swift */; };
+		10E288F522D098DD0094D434 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288F422D098DD0094D434 /* ChatModel.swift */; };
+		10E288F922D0A9DC0094D434 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288F822D0A9DC0094D434 /* Message.swift */; };
+		10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */; };
+		A770BD62D35EF70DF8B345FB /* Pods_WidrChatTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidrChatTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E288C622CF74980094D434 /* WidrChatTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidrChatTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E288C922CF74980094D434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10E288CB22CF74980094D434 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10E288CB22CF74980094D434 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		10E288CE22CF74980094D434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		10E288D122CF74980094D434 /* WidrChatTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WidrChatTest.xcdatamodel; sourceTree = "<group>"; };
 		10E288D322CF749A0094D434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10E288D622CF749A0094D434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10E288D822CF749A0094D434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E288E322CFA0160094D434 /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
+		10E288E522D053820094D434 /* LocalizedStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizedStrings.strings; sourceTree = "<group>"; };
+		10E288E722D058790094D434 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		10E288E922D05EE10094D434 /* Presenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenters.swift; sourceTree = "<group>"; };
+		10E288EC22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		10E288ED22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomingTextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
+		10E288F122D096470094D434 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		10E288F422D098DD0094D434 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		10E288F822D0A9DC0094D434 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidrChatTest.release.xcconfig"; path = "Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest.release.xcconfig"; sourceTree = "<group>"; };
+		943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidrChatTest.debug.xcconfig"; path = "Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A770BD62D35EF70DF8B345FB /* Pods_WidrChatTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +65,8 @@
 			children = (
 				10E288C822CF74980094D434 /* WidrChatTest */,
 				10E288C722CF74980094D434 /* Products */,
+				9E7C457F865A2AA73241F684 /* Pods */,
+				49124433FB4F045397B1C17C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +82,88 @@
 			isa = PBXGroup;
 			children = (
 				10E288C922CF74980094D434 /* AppDelegate.swift */,
-				10E288CB22CF74980094D434 /* ViewController.swift */,
-				10E288CD22CF74980094D434 /* Main.storyboard */,
-				10E288D322CF749A0094D434 /* Assets.xcassets */,
+				10E288F122D096470094D434 /* Coordinator.swift */,
+				10E288F722D0A9C00094D434 /* Models */,
+				10E288E022CF9EB70094D434 /* Scenes */,
+				10E288EB22D069520094D434 /* Cells */,
+				10E288E222CF9EDB0094D434 /* Resources */,
 				10E288D522CF749A0094D434 /* LaunchScreen.storyboard */,
+				10E288CD22CF74980094D434 /* Main.storyboard */,
 				10E288D822CF749A0094D434 /* Info.plist */,
-				10E288D022CF74980094D434 /* WidrChatTest.xcdatamodeld */,
 			);
 			path = WidrChatTest;
+			sourceTree = "<group>";
+		};
+		10E288E022CF9EB70094D434 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				10E288F322D097C30094D434 /* ChatViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		10E288E222CF9EDB0094D434 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10E288D322CF749A0094D434 /* Assets.xcassets */,
+				10E288E722D058790094D434 /* Colors.xcassets */,
+				10E288E522D053820094D434 /* LocalizedStrings.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10E288EB22D069520094D434 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				10E288F022D069900094D434 /* IncomingTextMessage */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		10E288F022D069900094D434 /* IncomingTextMessage */ = {
+			isa = PBXGroup;
+			children = (
+				10E288EC22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift */,
+				10E288ED22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib */,
+			);
+			path = IncomingTextMessage;
+			sourceTree = "<group>";
+		};
+		10E288F322D097C30094D434 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10E288E922D05EE10094D434 /* Presenters.swift */,
+				10E288E322CFA0160094D434 /* ChatDataSource.swift */,
+				10E288CB22CF74980094D434 /* ChatViewController.swift */,
+				10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */,
+				10E288F422D098DD0094D434 /* ChatModel.swift */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		10E288F722D0A9C00094D434 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10E288F822D0A9DC0094D434 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49124433FB4F045397B1C17C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E7C457F865A2AA73241F684 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */,
+				840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10E288DB22CF749A0094D434 /* Build configuration list for PBXNativeTarget "WidrChatTest" */;
 			buildPhases = (
+				429981BA433E80C0150F47E4 /* [CP] Check Pods Manifest.lock */,
 				10E288C222CF74980094D434 /* Sources */,
 				10E288C322CF74980094D434 /* Frameworks */,
 				10E288C422CF74980094D434 /* Resources */,
+				FB54767C812EFE52B5C1F793 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E288E822D058790094D434 /* Colors.xcassets in Resources */,
+				10E288EF22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib in Resources */,
+				10E288E622D053820094D434 /* LocalizedStrings.strings in Resources */,
 				10E288D722CF749A0094D434 /* LaunchScreen.storyboard in Resources */,
 				10E288D422CF749A0094D434 /* Assets.xcassets in Resources */,
 				10E288CF22CF74980094D434 /* Main.storyboard in Resources */,
@@ -133,14 +237,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		429981BA433E80C0150F47E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WidrChatTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB54767C812EFE52B5C1F793 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
+				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10E288C222CF74980094D434 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E288CC22CF74980094D434 /* ViewController.swift in Sources */,
-				10E288D222CF74980094D434 /* WidrChatTest.xcdatamodeld in Sources */,
+				10E288F522D098DD0094D434 /* ChatModel.swift in Sources */,
+				10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */,
+				10E288EA22D05EE10094D434 /* Presenters.swift in Sources */,
+				10E288F222D096470094D434 /* Coordinator.swift in Sources */,
+				10E288E422CFA0160094D434 /* ChatDataSource.swift in Sources */,
+				10E288F922D0A9DC0094D434 /* Message.swift in Sources */,
 				10E288CA22CF74980094D434 /* AppDelegate.swift in Sources */,
+				10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */,
+				10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +449,7 @@
 		};
 		10E288DC22CF749A0094D434 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +468,7 @@
 		};
 		10E288DD22CF749A0094D434 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,19 +507,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		10E288D022CF74980094D434 /* WidrChatTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				10E288D122CF74980094D434 /* WidrChatTest.xcdatamodel */,
-			);
-			currentVersion = 10E288D122CF74980094D434 /* WidrChatTest.xcdatamodel */;
-			path = WidrChatTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 10E288BE22CF74980094D434 /* Project object */;
 }

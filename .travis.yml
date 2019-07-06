@@ -1,0 +1,11 @@
+osx_image: xcode10.2  
+language: swift
+
+before_install:
+- pod install --repo-update
+
+script:
+- xcodebuild test -workspace WidrChatTest.xcworkspace -scheme WidrChatTest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' | xcpretty -c
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)

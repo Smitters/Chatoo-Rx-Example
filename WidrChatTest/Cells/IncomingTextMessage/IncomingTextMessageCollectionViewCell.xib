@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="IncomingTextMessageCollectionViewCell" id="gTV-IL-0wX" customClass="IncomingTextMessageCollectionViewCell" customModule="WidrChatTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6W-cx-vfC">
+                        <rect key="frame" x="8" y="2" width="175" height="51"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incoming message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-6c-p4e">
+                                <rect key="frame" x="15" y="8" width="152" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="lightGray"/>
+                        <constraints>
+                            <constraint firstItem="LK9-6c-p4e" firstAttribute="leading" secondItem="b6W-cx-vfC" secondAttribute="leading" constant="15" id="5wk-Gd-Y3D"/>
+                            <constraint firstItem="LK9-6c-p4e" firstAttribute="top" secondItem="b6W-cx-vfC" secondAttribute="top" constant="8" id="F9W-yr-gCR"/>
+                            <constraint firstAttribute="bottom" secondItem="LK9-6c-p4e" secondAttribute="bottom" constant="8" id="GJb-iB-LSb"/>
+                            <constraint firstAttribute="trailing" secondItem="LK9-6c-p4e" secondAttribute="trailing" constant="8" id="zWj-KN-Mvx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b6W-cx-vfC" secondAttribute="trailing" constant="50" id="Gs3-V7-ti4"/>
+                <constraint firstAttribute="bottom" secondItem="b6W-cx-vfC" secondAttribute="bottom" constant="2" id="SWo-w8-g8n"/>
+                <constraint firstItem="b6W-cx-vfC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="m5A-Ww-1fX"/>
+                <constraint firstItem="b6W-cx-vfC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="tKV-hH-Lra"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="320" height="55"/>
+            <connections>
+                <outlet property="bubbleView" destination="b6W-cx-vfC" id="jho-IQ-nFy"/>
+                <outlet property="textLabel" destination="LK9-6c-p4e" id="tHV-cJ-ZwW"/>
+            </connections>
+            <point key="canvasLocation" x="89.855072463768124" y="70.647321428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="lightGray">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
