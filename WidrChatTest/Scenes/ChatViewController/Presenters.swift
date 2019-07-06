@@ -30,7 +30,7 @@ class TextMessagePresenter: ChatItemPresenterProtocol {
                        decorationAttributes: ChatItemDecorationAttributesProtocol?) -> CGFloat {
 
         if case .text(let text) = message.content {
-            let horizontalInsets: CGFloat = 75
+            let horizontalInsets: CGFloat = 85
             let textWidth = width - horizontalInsets
             let constraintRect = CGSize(width: textWidth, height: .greatestFiniteMagnitude)
             let boundingBox = text.boundingRect(with: constraintRect,
@@ -39,7 +39,7 @@ class TextMessagePresenter: ChatItemPresenterProtocol {
                                                 context: nil)
 
             let textHeight = ceil(boundingBox.height)
-            let verticalInsets: CGFloat = 24
+            let verticalInsets: CGFloat = 25
             return textHeight + verticalInsets
         } else {
             return 0

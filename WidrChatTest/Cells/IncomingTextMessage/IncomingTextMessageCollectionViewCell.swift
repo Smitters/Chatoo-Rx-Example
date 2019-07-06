@@ -16,6 +16,6 @@ class IncomingTextMessageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         bubbleView.layer.cornerRadius = 15
+        textLabel.font = UIFont.systemFont(ofSize: 18)
     }
-
 }
