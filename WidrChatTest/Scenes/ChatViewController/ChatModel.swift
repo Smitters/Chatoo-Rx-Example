@@ -29,6 +29,10 @@ class MockChatModel: ChatModelType {
                 self.messages.append(self.generateRandomMessage())
             }
 
+            self.messages.sort(by: { (lhs: Message, rhs: Message) -> Bool in
+                lhs.time < rhs.time
+            })
+
             self.messagesRelay.accept(self.messages)
         }
     }
@@ -71,16 +75,7 @@ class MockChatModel: ChatModelType {
     private let otherUserId = UUID()
 
     private func generateRandomMessage() -> Message {
-        //let isText = ((1...10).randomElement() ?? 0) > 9  // 90% will be texts
-        let isText = true
-
-        let content: Message.Content
-        if isText {
-            content = Message.Content.text(quotes.randomElement() ?? "")
-        } else {
-            content = Message.Content.photo(#imageLiteral(resourceName: "text-icon-selected"))
-        }
-
+        let content = Message.Content.text(quotes.randomElement() ?? "")
         let isMyMessage = Bool.random()
         let senderId = isMyMessage ? currentUserId : otherUserId
         let time = generateRandomTime()

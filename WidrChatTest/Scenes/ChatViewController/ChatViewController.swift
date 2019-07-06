@@ -14,6 +14,7 @@ import RxSwift
 class ChatViewController: BaseChatViewController {
 
     private let disposeBag = DisposeBag()
+    private let decorator = ChatItemsDecorator()
 
     var dataSource: ChatDataSource?
     var viewModel: ChatViewModelType? {
@@ -27,7 +28,7 @@ class ChatViewController: BaseChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         chatDataSource = dataSource
-        dataSource?.delegate = self
+        chatItemsDecorator = decorator
 
         setupBindings()
         viewModel?.loadMessages()
@@ -41,6 +42,7 @@ class ChatViewController: BaseChatViewController {
 
         }).disposed(by: disposeBag)
     }
+
     // MARK: - Provide a input view
 
     var chatInputPresenter: BasicChatInputBarPresenter!
@@ -83,6 +85,8 @@ class ChatViewController: BaseChatViewController {
 
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
         let textMessagePresenterBuilder = TextMessagePresenterBuilder()
-        return [Message.textMessageType: [textMessagePresenterBuilder]]
+
+        return [Message.textMessageType: [textMessagePresenterBuilder],
+                DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()]]
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Presenters.swift
+//  TextMessagePresenter.swift
 //  WidrChatTest
 //
 //  Created by Smetankin Dmitry on 7/6/19.
@@ -39,7 +39,7 @@ class TextMessagePresenter: ChatItemPresenterProtocol {
             let textWidth = width - horizontalInsets
             let constraintRect = CGSize(width: textWidth, height: .greatestFiniteMagnitude)
             let boundingBox = text.boundingRect(with: constraintRect,
-                                                options: .usesLineFragmentOrigin,
+                                                options: [.usesLineFragmentOrigin, .usesFontLeading],
                                                 attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)],
                                                 context: nil)
 
