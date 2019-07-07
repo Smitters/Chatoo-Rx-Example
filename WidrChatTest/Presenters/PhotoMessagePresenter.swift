@@ -22,9 +22,11 @@ class PhotoMessagePresenter: ChatItemPresenterProtocol {
     }
 
     private let message: Message
+    private let photoSelectionCallback: (UIImage) -> Void
 
-    init(message: Message) {
+    init(message: Message, photoSelectionCallback: @escaping (UIImage) -> Void) {
         self.message = message
+        self.photoSelectionCallback = photoSelectionCallback
     }
 
     var canCalculateHeightInBackground: Bool {
@@ -63,11 +65,22 @@ class PhotoMessagePresenter: ChatItemPresenterProtocol {
 
         if case .photo(let image) = message.content {
             photoCell.photoImageView.image = image
+
+            photoCell.selectionCallback = { [unowned self] in
+                self.photoSelectionCallback(image)
+            }
         }
     }
 }
 
 class PhotoMessagePresenterBuilder: ChatItemPresenterBuilderProtocol {
+
+    private let photoSelectionCallback: (UIImage) -> Void
+
+    init(photoSelectionCallback: @escaping (UIImage) -> Void) {
+        self.photoSelectionCallback = photoSelectionCallback
+    }
+
     func canHandleChatItem(_ chatItem: ChatItemProtocol) -> Bool {
         return chatItem.type == Message.photoMessageType
     }
@@ -76,7 +89,7 @@ class PhotoMessagePresenterBuilder: ChatItemPresenterBuilderProtocol {
         guard let message = chatItem as? Message else {
             fatalError("Invalid ChatItem Type: \(chatItem.type). Expected: Message.")
         }
-        return PhotoMessagePresenter(message: message)
+        return PhotoMessagePresenter(message: message, photoSelectionCallback: photoSelectionCallback)
     }
 
     var presenterType: ChatItemPresenterProtocol.Type {

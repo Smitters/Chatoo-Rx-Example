@@ -16,6 +16,10 @@ protocol ChatCoordinatorType {
     func showPhoto(_ image: UIImage)
 }
 
+protocol PhotoViewerCoordinatorType {
+    func dismiss()
+}
+
 class Coordinator {
 
     private let window: UIWindow?
@@ -50,6 +54,15 @@ extension Coordinator: AppCoordinatorType {
 
 extension Coordinator: ChatCoordinatorType {
     func showPhoto(_ image: UIImage) {
-        #warning("TODO: show detailed photo with zoom")
+        let photoViewerController = Storyboards.Main.photoViewerController()
+        photoViewerController.viewModel = PhotoViewerViewModel(photo: image, coordinator: self)
+
+        navigationController?.present(photoViewerController, animated: true)
+    }
+}
+
+extension Coordinator: PhotoViewerCoordinatorType {
+    func dismiss() {
+        navigationController?.dismiss(animated: true)
     }
 }

@@ -23,6 +23,9 @@
 		10C129DF22D1C05E000D781E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129DD22D1C05E000D781E /* PhotoCollectionViewCell.swift */; };
 		10C129E022D1C05E000D781E /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129DE22D1C05E000D781E /* PhotoCollectionViewCell.xib */; };
 		10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */; };
+		10C129E622D1DA73000D781E /* PhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E522D1DA73000D781E /* PhotoViewerController.swift */; };
+		10C129E922D1E51E000D781E /* PhotoViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E822D1E51E000D781E /* PhotoViewerViewModel.swift */; };
+		10C129EC22D1E5FE000D781E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129EB22D1E5FE000D781E /* Storyboards.swift */; };
 		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
 		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
 		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
@@ -64,6 +67,9 @@
 		10C129DD22D1C05E000D781E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		10C129DE22D1C05E000D781E /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessagePresenter.swift; sourceTree = "<group>"; };
+		10C129E522D1DA73000D781E /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
+		10C129E822D1E51E000D781E /* PhotoViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewModel.swift; sourceTree = "<group>"; };
+		10C129EB22D1E5FE000D781E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -159,6 +165,25 @@
 			path = PhotoMessage;
 			sourceTree = "<group>";
 		};
+		10C129E722D1DA82000D781E /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				10C129E522D1DA73000D781E /* PhotoViewerController.swift */,
+				10C129E822D1E51E000D781E /* PhotoViewerViewModel.swift */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		10C129EA22D1E5DD000D781E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				10E288D522CF749A0094D434 /* LaunchScreen.storyboard */,
+				10E288CD22CF74980094D434 /* Main.storyboard */,
+				10C129EB22D1E5FE000D781E /* Storyboards.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		10D3FF0922D1084F00616019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +222,7 @@
 				10E288EB22D069520094D434 /* Cells */,
 				10C129C022D129A0000D781E /* Extensions */,
 				10E288E222CF9EDB0094D434 /* Resources */,
-				10E288D522CF749A0094D434 /* LaunchScreen.storyboard */,
-				10E288CD22CF74980094D434 /* Main.storyboard */,
+				10C129EA22D1E5DD000D781E /* Storyboards */,
 				10E288D822CF749A0094D434 /* Info.plist */,
 			);
 			path = WidrChatTest;
@@ -207,7 +231,8 @@
 		10E288E022CF9EB70094D434 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				10E288F322D097C30094D434 /* ChatViewController */,
+				10E288F322D097C30094D434 /* ChatView */,
+				10C129E722D1DA82000D781E /* PhotoViewer */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -245,7 +270,7 @@
 			path = TextMessage;
 			sourceTree = "<group>";
 		};
-		10E288F322D097C30094D434 /* ChatViewController */ = {
+		10E288F322D097C30094D434 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
 				10D3FF0A22D10E4200616019 /* ChatItemsDecorator.swift */,
@@ -254,7 +279,7 @@
 				10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */,
 				10E288F422D098DD0094D434 /* ChatModel.swift */,
 			);
-			path = ChatViewController;
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 		10E288F722D0A9C00094D434 /* Models */ = {
@@ -437,11 +462,14 @@
 				10C129D322D1B038000D781E /* MessageStatusPresenter.swift in Sources */,
 				10E288F922D0A9DC0094D434 /* Message.swift in Sources */,
 				10D3FF0D22D10F6400616019 /* DateExtensions.swift in Sources */,
+				10C129E922D1E51E000D781E /* PhotoViewerViewModel.swift in Sources */,
+				10C129EC22D1E5FE000D781E /* Storyboards.swift in Sources */,
 				10D3FF0B22D10E4200616019 /* ChatItemsDecorator.swift in Sources */,
 				10E288CA22CF74980094D434 /* AppDelegate.swift in Sources */,
 				10C129BA22D11660000D781E /* DateSeparatorPresenter.swift in Sources */,
 				10C129BD22D118B0000D781E /* DateSeparatorCollectionViewCell.swift in Sources */,
 				10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */,
+				10C129E622D1DA73000D781E /* PhotoViewerController.swift in Sources */,
 				10C129CD22D12C32000D781E /* MessageStatusCollectionViewCell.swift in Sources */,
 				10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */,
 				10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */,

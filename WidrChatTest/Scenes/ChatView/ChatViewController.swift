@@ -56,7 +56,7 @@ class ChatViewController: BaseChatViewController {
         appearance.textInputAppearance.font = UIFont.systemFont(ofSize: 18)
 
         self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView,
-                                                             chatInputItems: self.createChatInputItems(),
+                                                             chatInputItems: createChatInputItems(),
                                                              chatInputBarAppearance: appearance)
         return chatInputView
     }
@@ -70,17 +70,16 @@ class ChatViewController: BaseChatViewController {
 
     private func createTextInputItem() -> TextChatInputItem {
         let item = TextChatInputItem()
-        item.textInputHandler = { [weak self] text in
-            self?.viewModel?.send(text: text)
+        item.textInputHandler = { [unowned self] text in
+            self.viewModel?.send(text: text)
         }
         return item
     }
 
     private func createPhotoInputItem() -> PhotosChatInputItem {
         let item = PhotosChatInputItem(presentingController: self)
-
-        item.photoInputHandler = { [weak self] image, _ in
-            self?.viewModel?.send(image: image)
+        item.photoInputHandler = { [unowned self] image, _ in
+            self.viewModel?.send(image: image)
         }
         return item
     }
@@ -88,8 +87,12 @@ class ChatViewController: BaseChatViewController {
     // MARK: - Map messages to presenters
 
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
+        let photoMessagePresenterBuilder = PhotoMessagePresenterBuilder { [unowned self] photo in
+            self.viewModel?.select(photo: photo)
+        }
+
         return [Message.textMessageType: [TextMessagePresenterBuilder()],
-                Message.photoMessageType: [PhotoMessagePresenterBuilder()],
+                Message.photoMessageType: [photoMessagePresenterBuilder],
                 DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()],
                 TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
                 MessageStatusSeparatorModel.chatItemType: [MessageStatusPresenterBuilder()]]

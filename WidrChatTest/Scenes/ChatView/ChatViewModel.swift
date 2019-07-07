@@ -15,6 +15,8 @@ protocol ChatViewModelType {
     func loadMessages()
     func send(text: String)
     func send(image: UIImage)
+
+    func select(photo: UIImage)
 }
 
 class ChatViewModel: ChatViewModelType {
@@ -43,6 +45,8 @@ class ChatViewModel: ChatViewModelType {
     func send(image: UIImage) {
         model.send(image: image)
     }
+
+    func select(photo: UIImage) {
+        coordinator.showPhoto(photo)
+    }
 }
-
-
