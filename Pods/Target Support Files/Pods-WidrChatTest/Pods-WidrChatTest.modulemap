@@ -1,6 +1,0 @@
-framework module Pods_WidrChatTest {
-  umbrella header "Pods-WidrChatTest-umbrella.h"
-
-  export *
-  module * { export * }
-}

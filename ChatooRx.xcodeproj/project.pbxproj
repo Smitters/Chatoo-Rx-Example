@@ -33,6 +33,7 @@
 		10C129F822D226B1000D781E /* CallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129F622D226B1000D781E /* CallCollectionViewCell.swift */; };
 		10C129F922D226B1000D781E /* CallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129F722D226B1000D781E /* CallCollectionViewCell.xib */; };
 		10C129FC22D22D74000D781E /* CallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129FB22D22D74000D781E /* CallPresenter.swift */; };
+		10C2268622D252630068C294 /* ChatItemsDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C2268422D252630068C294 /* ChatItemsDecoratorTests.swift */; };
 		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
 		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
 		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
@@ -53,11 +54,24 @@
 		10E288F522D098DD0094D434 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288F422D098DD0094D434 /* ChatModel.swift */; };
 		10E288F922D0A9DC0094D434 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288F822D0A9DC0094D434 /* Message.swift */; };
 		10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */; };
-		A770BD62D35EF70DF8B345FB /* Pods_WidrChatTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */; };
+		86A3129A8487C91277C7A8AA /* Pods_ChatooRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932CE5C5EB7DD90750CD9051 /* Pods_ChatooRx.framework */; };
+		B57BE367C4BFFB3124A6D7A6 /* Pods_ChatooRxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C253E31F65D53087B8CD5B4 /* Pods_ChatooRxTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		10C2267A22D252230068C294 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10E288BE22CF74980094D434 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E288C522CF74980094D434;
+			remoteInfo = ChatooRx;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidrChatTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B245A522D24D360051F398 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		10B245A622D24D370051F398 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
+		10B245A722D24D370051F398 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		10C129B922D11660000D781E /* DateSeparatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeparatorPresenter.swift; sourceTree = "<group>"; };
 		10C129BB22D118B0000D781E /* DateSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		10C129BC22D118B0000D781E /* DateSeparatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSeparatorCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -84,12 +98,15 @@
 		10C129F622D226B1000D781E /* CallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCollectionViewCell.swift; sourceTree = "<group>"; };
 		10C129F722D226B1000D781E /* CallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCollectionViewCell.xib; sourceTree = "<group>"; };
 		10C129FB22D22D74000D781E /* CallPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPresenter.swift; sourceTree = "<group>"; };
+		10C2267522D252230068C294 /* ChatooRxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatooRxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10C2268422D252630068C294 /* ChatItemsDecoratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemsDecoratorTests.swift; sourceTree = "<group>"; };
+		10C2268522D252630068C294 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		10D3FF0A22D10E4200616019 /* ChatItemsDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemsDecorator.swift; sourceTree = "<group>"; };
 		10D3FF0C22D10F6400616019 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		10E288C622CF74980094D434 /* WidrChatTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidrChatTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E288C622CF74980094D434 /* ChatooRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatooRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E288C922CF74980094D434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10E288CB22CF74980094D434 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		10E288CE22CF74980094D434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,16 +123,28 @@
 		10E288F422D098DD0094D434 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		10E288F822D0A9DC0094D434 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		10E288FA22D0ABFC0094D434 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidrChatTest.release.xcconfig"; path = "Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest.release.xcconfig"; sourceTree = "<group>"; };
-		943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidrChatTest.debug.xcconfig"; path = "Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1C253E31F65D53087B8CD5B4 /* Pods_ChatooRxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatooRxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D609418FCB84B34DD92228E /* Pods-ChatooRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatooRxTests.release.xcconfig"; path = "Target Support Files/Pods-ChatooRxTests/Pods-ChatooRxTests.release.xcconfig"; sourceTree = "<group>"; };
+		35C6FF788BA11307A8A29899 /* Pods-ChatooRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatooRx.debug.xcconfig"; path = "Target Support Files/Pods-ChatooRx/Pods-ChatooRx.debug.xcconfig"; sourceTree = "<group>"; };
+		4A4406C21873AC6D19D79D17 /* Pods-ChatooRxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatooRxTests.debug.xcconfig"; path = "Target Support Files/Pods-ChatooRxTests/Pods-ChatooRxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		878FC027D549BC2043DCD646 /* Pods-ChatooRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatooRx.release.xcconfig"; path = "Target Support Files/Pods-ChatooRx/Pods-ChatooRx.release.xcconfig"; sourceTree = "<group>"; };
+		932CE5C5EB7DD90750CD9051 /* Pods_ChatooRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatooRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		10C2267222D252230068C294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B57BE367C4BFFB3124A6D7A6 /* Pods_ChatooRxTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10E288C322CF74980094D434 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A770BD62D35EF70DF8B345FB /* Pods_WidrChatTest.framework in Frameworks */,
+				86A3129A8487C91277C7A8AA /* Pods_ChatooRx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +246,15 @@
 			path = CallCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		10C2268322D252630068C294 /* ChatooRxTests */ = {
+			isa = PBXGroup;
+			children = (
+				10C2268422D252630068C294 /* ChatItemsDecoratorTests.swift */,
+				10C2268522D252630068C294 /* Info.plist */,
+			);
+			path = ChatooRxTests;
+			sourceTree = "<group>";
+		};
 		10D3FF0922D1084F00616019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,22 +267,27 @@
 		10E288BD22CF74980094D434 = {
 			isa = PBXGroup;
 			children = (
-				10E288C822CF74980094D434 /* WidrChatTest */,
+				10E288C822CF74980094D434 /* ChatooRx */,
+				10C2268322D252630068C294 /* ChatooRxTests */,
 				10E288C722CF74980094D434 /* Products */,
 				9E7C457F865A2AA73241F684 /* Pods */,
 				49124433FB4F045397B1C17C /* Frameworks */,
+				10B245A522D24D360051F398 /* .travis.yml */,
+				10B245A622D24D370051F398 /* codecov.yml */,
+				10B245A722D24D370051F398 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
 		10E288C722CF74980094D434 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10E288C622CF74980094D434 /* WidrChatTest.app */,
+				10E288C622CF74980094D434 /* ChatooRx.app */,
+				10C2267522D252230068C294 /* ChatooRxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		10E288C822CF74980094D434 /* WidrChatTest */ = {
+		10E288C822CF74980094D434 /* ChatooRx */ = {
 			isa = PBXGroup;
 			children = (
 				10E288C922CF74980094D434 /* AppDelegate.swift */,
@@ -258,7 +301,7 @@
 				10C129EA22D1E5DD000D781E /* Storyboards */,
 				10E288E222CF9EDB0094D434 /* Resources */,
 			);
-			path = WidrChatTest;
+			path = ChatooRx;
 			sourceTree = "<group>";
 		};
 		10E288E022CF9EB70094D434 /* Scenes */ = {
@@ -333,7 +376,8 @@
 		49124433FB4F045397B1C17C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				026F1F09E77E1717DC807BF7 /* Pods_WidrChatTest.framework */,
+				932CE5C5EB7DD90750CD9051 /* Pods_ChatooRx.framework */,
+				1C253E31F65D53087B8CD5B4 /* Pods_ChatooRxTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,8 +385,10 @@
 		9E7C457F865A2AA73241F684 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */,
-				840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */,
+				35C6FF788BA11307A8A29899 /* Pods-ChatooRx.debug.xcconfig */,
+				878FC027D549BC2043DCD646 /* Pods-ChatooRx.release.xcconfig */,
+				4A4406C21873AC6D19D79D17 /* Pods-ChatooRxTests.debug.xcconfig */,
+				2D609418FCB84B34DD92228E /* Pods-ChatooRxTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -350,9 +396,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		10E288C522CF74980094D434 /* WidrChatTest */ = {
+		10C2267422D252230068C294 /* ChatooRxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10E288DB22CF749A0094D434 /* Build configuration list for PBXNativeTarget "WidrChatTest" */;
+			buildConfigurationList = 10C2267C22D252230068C294 /* Build configuration list for PBXNativeTarget "ChatooRxTests" */;
+			buildPhases = (
+				842D2A060BD0B73CD83BB29B /* [CP] Check Pods Manifest.lock */,
+				10C2267122D252230068C294 /* Sources */,
+				10C2267222D252230068C294 /* Frameworks */,
+				10C2267322D252230068C294 /* Resources */,
+				950C106BE03E431A8D987FA5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10C2267B22D252230068C294 /* PBXTargetDependency */,
+			);
+			name = ChatooRxTests;
+			productName = ChatooRxTests;
+			productReference = 10C2267522D252230068C294 /* ChatooRxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10E288C522CF74980094D434 /* ChatooRx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E288DB22CF749A0094D434 /* Build configuration list for PBXNativeTarget "ChatooRx" */;
 			buildPhases = (
 				429981BA433E80C0150F47E4 /* [CP] Check Pods Manifest.lock */,
 				10E288C222CF74980094D434 /* Sources */,
@@ -364,9 +430,9 @@
 			);
 			dependencies = (
 			);
-			name = WidrChatTest;
+			name = ChatooRx;
 			productName = WidrChatTest;
-			productReference = 10E288C622CF74980094D434 /* WidrChatTest.app */;
+			productReference = 10E288C622CF74980094D434 /* ChatooRx.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -379,12 +445,16 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Smetankin;
 				TargetAttributes = {
+					10C2267422D252230068C294 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 10E288C522CF74980094D434;
+					};
 					10E288C522CF74980094D434 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 10E288C122CF74980094D434 /* Build configuration list for PBXProject "WidrChatTest" */;
+			buildConfigurationList = 10E288C122CF74980094D434 /* Build configuration list for PBXProject "ChatooRx" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -397,12 +467,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10E288C522CF74980094D434 /* WidrChatTest */,
+				10E288C522CF74980094D434 /* ChatooRx */,
+				10C2267422D252230068C294 /* ChatooRxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		10C2267322D252230068C294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10E288C422CF74980094D434 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,14 +520,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WidrChatTest-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ChatooRx-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB54767C812EFE52B5C1F793 /* [CP] Embed Pods Frameworks */ = {
+		842D2A060BD0B73CD83BB29B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,7 +535,29 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest-frameworks.sh",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatooRxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		950C106BE03E431A8D987FA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatooRxTests/Pods-ChatooRxTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
 				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -476,12 +576,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WidrChatTest/Pods-WidrChatTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatooRxTests/Pods-ChatooRxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB54767C812EFE52B5C1F793 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatooRx/Pods-ChatooRx-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
+				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatooRx/Pods-ChatooRx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		10C2267122D252230068C294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C2268622D252630068C294 /* ChatItemsDecoratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10E288C222CF74980094D434 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +661,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		10C2267B22D252230068C294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E288C522CF74980094D434 /* ChatooRx */;
+			targetProxy = 10C2267A22D252230068C294 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		10E288CD22CF74980094D434 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -543,6 +689,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		10C2267D22D252230068C294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4406C21873AC6D19D79D17 /* Pods-ChatooRxTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35RWD3B7ZL;
+				INFOPLIST_FILE = ChatooRxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smd.test.ChatooRxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatooRx.app/ChatooRx";
+			};
+			name = Debug;
+		};
+		10C2267E22D252230068C294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D609418FCB84B34DD92228E /* Pods-ChatooRxTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35RWD3B7ZL;
+				INFOPLIST_FILE = ChatooRxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smd.test.ChatooRxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatooRx.app/ChatooRx";
+			};
+			name = Release;
+		};
 		10E288D922CF749A0094D434 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -661,12 +849,13 @@
 		};
 		10E288DC22CF749A0094D434 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943FADDB9F8B92DB83BF1592 /* Pods-WidrChatTest.debug.xcconfig */;
+			baseConfigurationReference = 35C6FF788BA11307A8A29899 /* Pods-ChatooRx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35RWD3B7ZL;
-				INFOPLIST_FILE = "$(SRCROOT)/WidrChatTest/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChatooRx/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,12 +869,13 @@
 		};
 		10E288DD22CF749A0094D434 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 840383CA44466AB9C0D78A6D /* Pods-WidrChatTest.release.xcconfig */;
+			baseConfigurationReference = 878FC027D549BC2043DCD646 /* Pods-ChatooRx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35RWD3B7ZL;
-				INFOPLIST_FILE = "$(SRCROOT)/WidrChatTest/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChatooRx/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,7 +890,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10E288C122CF74980094D434 /* Build configuration list for PBXProject "WidrChatTest" */ = {
+		10C2267C22D252230068C294 /* Build configuration list for PBXNativeTarget "ChatooRxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10C2267D22D252230068C294 /* Debug */,
+				10C2267E22D252230068C294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E288C122CF74980094D434 /* Build configuration list for PBXProject "ChatooRx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10E288D922CF749A0094D434 /* Debug */,
@@ -709,7 +908,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		10E288DB22CF749A0094D434 /* Build configuration list for PBXNativeTarget "WidrChatTest" */ = {
+		10E288DB22CF749A0094D434 /* Build configuration list for PBXNativeTarget "ChatooRx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10E288DC22CF749A0094D434 /* Debug */,

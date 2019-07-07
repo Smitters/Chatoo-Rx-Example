@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_WidrChatTestVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_WidrChatTestVersionString[];
+FOUNDATION_EXPORT double Pods_ChatooRxVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ChatooRxVersionString[];
 
