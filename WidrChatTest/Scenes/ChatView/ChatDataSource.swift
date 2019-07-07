@@ -13,7 +13,7 @@ final class ChatDataSource: ChatDataSourceProtocol {
     weak var delegate: ChatDataSourceDelegateProtocol?
     var hasMoreNext = false
     var hasMorePrevious = false
-    var chatItems: [ChatItemProtocol] = [] // will be messages and calls
+    var chatItems: [ChatItemProtocol] = []
 
     func loadNext() { }
     func loadPrevious() { }
