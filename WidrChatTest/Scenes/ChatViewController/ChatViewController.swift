@@ -10,13 +10,14 @@ import Chatto
 import ChattoAdditions
 import RxCocoa
 import RxSwift
+import UIKit
 
 class ChatViewController: BaseChatViewController {
 
     private let disposeBag = DisposeBag()
-    private let decorator = ChatItemsDecorator()
 
     var dataSource: ChatDataSource?
+
     var viewModel: ChatViewModelType? {
         didSet {
             if isViewLoaded {
@@ -28,7 +29,6 @@ class ChatViewController: BaseChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         chatDataSource = dataSource
-        chatItemsDecorator = decorator
 
         setupBindings()
         viewModel?.loadMessages()
@@ -49,11 +49,16 @@ class ChatViewController: BaseChatViewController {
 
     override func createChatInputView() -> UIView {
         let chatInputView = ChatInputBar.loadNib()
+        chatInputView.maxCharactersCount = 500
+
         var appearance = ChatInputBarAppearance()
         appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
         appearance.textInputAppearance.placeholderText = NSLocalizedString("Message", comment: "")
-        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
-        chatInputView.maxCharactersCount = 500
+        appearance.textInputAppearance.font = UIFont.systemFont(ofSize: 18)
+
+        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView,
+                                                             chatInputItems: self.createChatInputItems(),
+                                                             chatInputBarAppearance: appearance)
         return chatInputView
     }
 
@@ -84,9 +89,9 @@ class ChatViewController: BaseChatViewController {
     // MARK: - Map messages to presenters
 
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
-        let textMessagePresenterBuilder = TextMessagePresenterBuilder()
-
-        return [Message.textMessageType: [textMessagePresenterBuilder],
-                DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()]]
+        return [Message.textMessageType: [TextMessagePresenterBuilder()],
+                DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()],
+                TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
+                MessageStatusSeparatorModel.chatItemType: [MessageStatusPresenterBuilder()]]
     }
 }

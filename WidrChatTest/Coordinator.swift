@@ -42,6 +42,7 @@ extension Coordinator: AppCoordinatorType {
             let viewModel = ChatViewModel(coordinator: self, model: model)
 
             chatViewController.dataSource = ChatDataSource()
+            chatViewController.chatItemsDecorator = ChatItemsDecorator()
             chatViewController.viewModel = viewModel
         }
     }
