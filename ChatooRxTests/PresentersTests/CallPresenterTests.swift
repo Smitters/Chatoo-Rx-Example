@@ -22,19 +22,21 @@ class CallPresenterTests: XCTestCase {
     }
 
     func testTimeTextForCanceledCall() {
-        let time = Date(timeIntervalSince1970: 0)
+        let components = DateComponents(calendar: .current, timeZone: .current, year: 2000, month: 1, day: 1, hour: 1, minute: 25)
+        let time = components.date ?? Date()
         let call = Call(status: .canceled, senderId: UUID(), isIncoming: false, time: time)
         let timeText = callPresenter.getTimeText(for: call)
 
-        XCTAssertEqual(timeText, "at 3:00 AM")
+        XCTAssertEqual(timeText, "at 1:25 AM")
     }
 
     func testTimeTextForMissedCall() {
-        let time = Date(timeIntervalSince1970: 60 * 60 * 2)
+        let components = DateComponents(calendar: .current, timeZone: .current, year: 2000, month: 1, day: 1, hour: 15, minute: 45)
+        let time = components.date ?? Date()
         let call = Call(status: .missed, senderId: UUID(), isIncoming: false, time: time)
         let timeText = callPresenter.getTimeText(for: call)
 
-        XCTAssertEqual(timeText, "at 5:00 AM")
+        XCTAssertEqual(timeText, "at 3:45 PM")
     }
 
     func testTimeTextForEndedCall() {
