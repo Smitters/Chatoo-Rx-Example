@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10BA67C122D27D4600BFFA66 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA67C022D27D4600BFFA66 /* ChatViewModelTests.swift */; };
+		10BA67C322D2829B00BFFA66 /* ChatDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA67C222D2829B00BFFA66 /* ChatDataSourceTests.swift */; };
+		10BA67C722D284B300BFFA66 /* CallPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA67C622D284B300BFFA66 /* CallPresenterTests.swift */; };
 		10C129BA22D11660000D781E /* DateSeparatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129B922D11660000D781E /* DateSeparatorPresenter.swift */; };
 		10C129BD22D118B0000D781E /* DateSeparatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129BB22D118B0000D781E /* DateSeparatorCollectionViewCell.swift */; };
 		10C129BE22D118B0000D781E /* DateSeparatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129BC22D118B0000D781E /* DateSeparatorCollectionViewCell.xib */; };
@@ -72,6 +75,9 @@
 		10B245A522D24D360051F398 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		10B245A622D24D370051F398 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
 		10B245A722D24D370051F398 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		10BA67C022D27D4600BFFA66 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
+		10BA67C222D2829B00BFFA66 /* ChatDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSourceTests.swift; sourceTree = "<group>"; };
+		10BA67C622D284B300BFFA66 /* CallPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPresenterTests.swift; sourceTree = "<group>"; };
 		10C129B922D11660000D781E /* DateSeparatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeparatorPresenter.swift; sourceTree = "<group>"; };
 		10C129BB22D118B0000D781E /* DateSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		10C129BC22D118B0000D781E /* DateSeparatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSeparatorCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -151,6 +157,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10BA67C422D283DF00BFFA66 /* ChatViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				10C2268422D252630068C294 /* ChatItemsDecoratorTests.swift */,
+				10BA67C022D27D4600BFFA66 /* ChatViewModelTests.swift */,
+				10BA67C222D2829B00BFFA66 /* ChatDataSourceTests.swift */,
+			);
+			path = ChatViewTests;
+			sourceTree = "<group>";
+		};
+		10BA67C522D2846D00BFFA66 /* PresentersTests */ = {
+			isa = PBXGroup;
+			children = (
+				10BA67C622D284B300BFFA66 /* CallPresenterTests.swift */,
+			);
+			path = PresentersTests;
+			sourceTree = "<group>";
+		};
 		10C129BF22D11A08000D781E /* DateSeparator */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +273,8 @@
 		10C2268322D252630068C294 /* ChatooRxTests */ = {
 			isa = PBXGroup;
 			children = (
-				10C2268422D252630068C294 /* ChatItemsDecoratorTests.swift */,
+				10BA67C522D2846D00BFFA66 /* PresentersTests */,
+				10BA67C422D283DF00BFFA66 /* ChatViewTests */,
 				10C2268522D252630068C294 /* Info.plist */,
 			);
 			path = ChatooRxTests;
@@ -616,6 +641,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BA67C322D2829B00BFFA66 /* ChatDataSourceTests.swift in Sources */,
+				10BA67C122D27D4600BFFA66 /* ChatViewModelTests.swift in Sources */,
+				10BA67C722D284B300BFFA66 /* CallPresenterTests.swift in Sources */,
 				10C2268622D252630068C294 /* ChatItemsDecoratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

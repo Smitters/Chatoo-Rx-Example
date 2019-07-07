@@ -86,11 +86,11 @@ class CallPresenter: ChatItemPresenterProtocol {
             let minutesText = minutes > 1 ? "mins" : "min"
             let secondsText = seconds > 1 ? "secs" : "sec"
 
-            return "\(minutes)\(minutesText) \(seconds)\(secondsText)"
+            return "\(minutes) \(minutesText) \(seconds) \(secondsText)"
         case .inProgress:
             let duration = Date().timeIntervalSince(call.time)
             let seconds = Int(duration) % 60
-            let minutes = Int(duration) / 60
+            let minutes = (Int(duration) / 60) % 60
             let hours = Int(duration) / 3600
 
             return String(format: "%02d:%02d:%02d", hours, minutes, seconds)

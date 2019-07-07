@@ -5,7 +5,7 @@ before_install:
 - pod install --repo-update
 
 script:
-- xcodebuild test -workspace ChatooRx.xcworkspace -scheme ChatooRx -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' | xcpretty -c
+- xcodebuild test -workspace ChatooRx.xcworkspace -scheme ChatooRx -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8'
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -t f87f17b1-e491-4164-9657-196718f276ef

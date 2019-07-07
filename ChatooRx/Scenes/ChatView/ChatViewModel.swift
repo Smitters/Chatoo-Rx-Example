@@ -39,8 +39,6 @@ class ChatViewModel: ChatViewModelType {
             resultArray.sort(by: { $0.time < $1.time })
             return resultArray
         }.bind(to: chatItemsRelay).disposed(by: disposeBag)
-
-        //model.messagesRelay.map{ $0 }.bind(to: chatItemsRelay).disposed(by: disposeBag)
     }
 
     var userRelay: BehaviorRelay<User?> {
