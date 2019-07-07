@@ -1,11 +1,11 @@
-# Chatoo Rx Exampe
+# Chatto Rx Exampe
 
 [![Build Status](https://api.travis-ci.org/Smitters/Chatoo-Rx-Example.svg?branch=master)](https://travis-ci.org/Smitters/Chatoo-Rx-Example)
 [![codecov](https://codecov.io/gh/Smitters/Chatoo-Rx-Example/branch/master/graph/badge.svg)](https://codecov.io/gh/Smitters/Chatoo-Rx-Example)
 ![Swift 5](https://img.shields.io/badge/Swift-5-orange.svg)
 [![Twitter](https://img.shields.io/badge/contact-@smetankin93-blue.svg?style=flat)](https://twitter.com/smetankin93)
 
-Chatoo lib example with custom cells and separators. 
+[Chatto](https://github.com/badoo/Chatto) lib example with custom cells and separators. 
 Used RxSwift and MVVM architecture pattern.
 
 ![GIF](https://github.com/Smitters/Chatoo-Rx-Example/blob/master/sample.gif)
