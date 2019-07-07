@@ -11,8 +11,11 @@ import RxSwift
 
 protocol ChatViewModelType {
     var messagesRelay: BehaviorRelay<[Message]> { get }
+    var userRelay: BehaviorRelay<User?> { get }
 
     func loadMessages()
+    func loadUser()
+
     func send(text: String)
     func send(image: UIImage)
 
@@ -34,8 +37,16 @@ class ChatViewModel: ChatViewModelType {
         model.messagesRelay.bind(to: messagesRelay).disposed(by: disposeBag)
     }
 
+    var userRelay: BehaviorRelay<User?> {
+        return model.userRelay
+    }
+
     func loadMessages() {
         model.loadMessages()
+    }
+
+    func loadUser() {
+        model.loadUser()
     }
 
     func send(text: String) {

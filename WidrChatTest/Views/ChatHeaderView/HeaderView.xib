@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="WidrChatTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Grk-LZ-eUt">
+                    <rect key="frame" x="188" y="15" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="2xf-wL-jKT"/>
+                        <constraint firstAttribute="width" constant="38" id="3qv-Lw-nI4"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvx-9e-4CN">
+                    <rect key="frame" x="15" y="58" width="384" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-F5-pLh">
+                    <rect key="frame" x="127" y="86" width="160" height="25"/>
+                    <color key="backgroundColor" name="veryLightBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="CbC-1j-kAk"/>
+                        <constraint firstAttribute="height" constant="25" id="OCh-eg-LaA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <state key="normal" title="Display mutual contact">
+                        <color key="titleColor" name="darkBlue"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-6C-cwd">
+                    <rect key="frame" x="0.0" y="129" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="jZb-7S-LcL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Grk-LZ-eUt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cts-Uh-0e1"/>
+                <constraint firstItem="pvx-9e-4CN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="JOU-U8-GEo"/>
+                <constraint firstItem="GgJ-F5-pLh" firstAttribute="top" secondItem="pvx-9e-4CN" secondAttribute="bottom" constant="10" id="LgP-PU-vre"/>
+                <constraint firstItem="pvx-9e-4CN" firstAttribute="top" secondItem="Grk-LZ-eUt" secondAttribute="bottom" constant="5" id="Op3-oa-HUq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pvx-9e-4CN" secondAttribute="trailing" constant="15" id="dMG-0l-ASy"/>
+                <constraint firstItem="GgJ-F5-pLh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fqM-pg-VVg"/>
+                <constraint firstAttribute="trailing" secondItem="hIn-6C-cwd" secondAttribute="trailing" id="muT-1N-aJQ"/>
+                <constraint firstItem="hIn-6C-cwd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s43-oq-VHq"/>
+                <constraint firstItem="Grk-LZ-eUt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="x0s-oK-IYP"/>
+                <constraint firstAttribute="bottom" secondItem="hIn-6C-cwd" secondAttribute="bottom" id="xv9-Fv-5KX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarImageView" destination="Grk-LZ-eUt" id="aKK-xn-H7e"/>
+                <outlet property="userNameLabel" destination="pvx-9e-4CN" id="HUN-i2-7aG"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-148.66071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar_placeholder" width="150" height="150"/>
+        <namedColor name="darkBlue">
+            <color red="0.15686274509803921" green="0.3411764705882353" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightBlue">
+            <color red="0.87450980392156863" green="0.90196078431372551" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

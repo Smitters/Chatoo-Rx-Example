@@ -26,6 +26,9 @@
 		10C129E622D1DA73000D781E /* PhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E522D1DA73000D781E /* PhotoViewerController.swift */; };
 		10C129E922D1E51E000D781E /* PhotoViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E822D1E51E000D781E /* PhotoViewerViewModel.swift */; };
 		10C129EC22D1E5FE000D781E /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129EB22D1E5FE000D781E /* Storyboards.swift */; };
+		10C129EE22D21385000D781E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129ED22D21385000D781E /* HeaderView.swift */; };
+		10C129F022D21395000D781E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129EF22D21395000D781E /* HeaderView.xib */; };
+		10C129F322D21B2C000D781E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129F222D21B2C000D781E /* User.swift */; };
 		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
 		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
 		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
@@ -70,6 +73,9 @@
 		10C129E522D1DA73000D781E /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
 		10C129E822D1E51E000D781E /* PhotoViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewModel.swift; sourceTree = "<group>"; };
 		10C129EB22D1E5FE000D781E /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		10C129ED22D21385000D781E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		10C129EF22D21395000D781E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		10C129F222D21B2C000D781E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -184,10 +190,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		10C129F122D21597000D781E /* ChatHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				10C129ED22D21385000D781E /* HeaderView.swift */,
+				10C129EF22D21395000D781E /* HeaderView.xib */,
+			);
+			path = ChatHeaderView;
+			sourceTree = "<group>";
+		};
 		10D3FF0922D1084F00616019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				10D3FF0722D106CB00616019 /* GradientView.swift */,
+				10C129F122D21597000D781E /* ChatHeaderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +305,7 @@
 				10C129C222D129F6000D781E /* DateSeparatorModel.swift */,
 				10C129C422D12A2E000D781E /* TimeSeparatorModel.swift */,
 				10C129D422D1B113000D781E /* MessageStatusSeparatorModel.swift */,
+				10C129F222D21B2C000D781E /* User.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -370,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C129F022D21395000D781E /* HeaderView.xib in Resources */,
 				10E288E822D058790094D434 /* Colors.xcassets in Resources */,
 				10E288EF22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib in Resources */,
 				10C129BE22D118B0000D781E /* DateSeparatorCollectionViewCell.xib in Resources */,
@@ -452,6 +470,7 @@
 				10D3FF0822D106CB00616019 /* GradientView.swift in Sources */,
 				10C129C322D129F6000D781E /* DateSeparatorModel.swift in Sources */,
 				10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */,
+				10C129F322D21B2C000D781E /* User.swift in Sources */,
 				10C129C822D12B62000D781E /* TimeSeparatorCollectionViewCell.swift in Sources */,
 				10E288EA22D05EE10094D434 /* TextMessagePresenter.swift in Sources */,
 				10C129D522D1B113000D781E /* MessageStatusSeparatorModel.swift in Sources */,
@@ -474,6 +493,7 @@
 				10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */,
 				10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */,
 				10C129D122D1AF31000D781E /* TimeSeparatorPresenter.swift in Sources */,
+				10C129EE22D21385000D781E /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,14 @@
 //
 
 import RxCocoa
+import UIKit
 
 protocol ChatModelType {
     var messagesRelay: BehaviorRelay<[Message]> { get }
+    var userRelay: BehaviorRelay<User?> { get }
 
     func loadMessages()
+    func loadUser()
     func send(text: String)
     func send(image: UIImage)
 }
@@ -21,6 +24,7 @@ class MockChatModel: ChatModelType {
     private var messages: [Message] = []
 
     var messagesRelay = BehaviorRelay<[Message]>(value: [])
+    var userRelay = BehaviorRelay<User?>(value: nil)
 
     func loadMessages() {
         DispatchQueue.global().async { [weak self] in
@@ -35,6 +39,12 @@ class MockChatModel: ChatModelType {
 
             self.messagesRelay.accept(self.messages)
         }
+    }
+
+    func loadUser() {
+        let user = User(fullName: "Alex Maquin",
+                        avatar: UIImage(imageLiteralResourceName: "avatar_placeholder"))
+        userRelay.accept(user)
     }
 
     func send(text: String) {
@@ -63,7 +73,7 @@ class MockChatModel: ChatModelType {
     }
 
     private func updateMessage(_ message: Message, with status: Message.Status, afterDelay delay: TimeInterval) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+        DispatchQueue.global().asyncAfter(deadline: .now() + delay) { [weak self] in
             guard let self = self else { return }
 
             message.status = status
