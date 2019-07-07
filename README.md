@@ -13,5 +13,5 @@ Used RxSwift and MVVM architecture pattern.
 ## Help, feedback or suggestions?
 
 - [Open an issue](https://github.com/Smitters/Chatoo-Rx-Example/issues/new) if you need help, if you found a bug, or if you want to discuss a feature request.
-- [Open a PR](https://github.com/Smitters/Chatoo-Rx-Example/pull/new/master) if you want to make some change to `AudioRecorder`.
+- [Open a PR](https://github.com/Smitters/Chatoo-Rx-Example/pull/new/master) if you want to make some change to `Chatoo-Rx-Example`.
 - Contact [@smetankin93 on Twitter](https://twitter.com/smetankin93) for discussions, news & announcements about new pods.
