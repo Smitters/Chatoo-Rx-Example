@@ -10,10 +10,12 @@ import RxCocoa
 import UIKit
 
 protocol ChatModelType {
+    var callsRelay: BehaviorRelay<[Call]> { get }
     var messagesRelay: BehaviorRelay<[Message]> { get }
     var userRelay: BehaviorRelay<User?> { get }
 
     func loadMessages()
+    func loadCalls()
     func loadUser()
     func send(text: String)
     func send(image: UIImage)
@@ -21,23 +23,38 @@ protocol ChatModelType {
 
 class MockChatModel: ChatModelType {
 
+    private let currentUserId = UUID()
+    private let otherUserId = UUID()
+
     private var messages: [Message] = []
+    private var calls: [Call] = []
 
     var messagesRelay = BehaviorRelay<[Message]>(value: [])
+    var callsRelay = BehaviorRelay<[Call]>(value: [])
     var userRelay = BehaviorRelay<User?>(value: nil)
 
     func loadMessages() {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
+
             for _ in 0...100 {
                 self.messages.append(self.generateRandomMessage())
             }
 
-            self.messages.sort(by: { (lhs: Message, rhs: Message) -> Bool in
-                lhs.time < rhs.time
-            })
-
             self.messagesRelay.accept(self.messages)
+        }
+    }
+
+    func loadCalls() {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+
+            for _ in 0...15 {
+                self.calls.append(self.generateRandomCall())
+            }
+            self.calls.append(Call(status: .inProgress, senderId: self.currentUserId, isIncoming: true))
+
+            self.callsRelay.accept(self.calls)
         }
     }
 
@@ -80,9 +97,33 @@ class MockChatModel: ChatModelType {
             self.messagesRelay.accept(self.messages)
         }
     }
+}
 
-    private let currentUserId = UUID()
-    private let otherUserId = UUID()
+// MARK: - Mock Calls Generation
+
+private extension MockChatModel {
+    func generateRandomCall() -> Call {
+        let isIncoming = Bool.random()
+        let senderId = isIncoming ? otherUserId : currentUserId
+        let time = generateRandomTime()
+
+        let status: Call.Status
+        let randomDuration = (1...3600).randomElement()!
+        if isIncoming {
+            let possibleStatuses: [Call.Status] = [.missed, .ended(duration: TimeInterval(randomDuration))]
+            status = possibleStatuses.randomElement()!
+        } else {
+            let possibleStatuses: [Call.Status] = [.canceled, .ended(duration: TimeInterval(randomDuration))]
+            status = possibleStatuses.randomElement()!
+        }
+
+        return Call(status: status, senderId: senderId, isIncoming: isIncoming, time: time)
+    }
+}
+
+// MARK: - Mock Messages Generation
+
+private extension MockChatModel {
 
     private func generateRandomMessage() -> Message {
         let isMyMessage = Bool.random()
@@ -92,7 +133,7 @@ class MockChatModel: ChatModelType {
         let isTextMessage = ((1...10).randomElement() ?? 0) < 9  // 90% will be text messages
         let content: Message.Content
         if isTextMessage {
-            content = Message.Content.text(quotes.randomElement() ?? "")
+            content = Message.Content.text(MockChatModel.quotes.randomElement() ?? "")
         } else {
             content = Message.Content.photo(getRandomPhoto())
         }
@@ -105,7 +146,7 @@ class MockChatModel: ChatModelType {
 
     private func getRandomPhoto() -> UIImage {
         return Bool.random() ? UIImage(imageLiteralResourceName: "horizontal_example") :
-                               UIImage(imageLiteralResourceName: "vertical_example")
+            UIImage(imageLiteralResourceName: "vertical_example")
     }
 
     private func generateRandomTime() -> Date {
@@ -115,11 +156,13 @@ class MockChatModel: ChatModelType {
         let hoursOffset = (0...23).randomElement() ?? 0
         let hoursTimeIntervalOffset: TimeInterval = -60 * 60 * TimeInterval(hoursOffset)
 
+        let secondsOffset = TimeInterval(-1 * ((0...3600).randomElement() ?? 0))
+
         let date = Date()
-        return date.addingTimeInterval(daysTimeIntervalOffset + hoursTimeIntervalOffset)
+        return date.addingTimeInterval(daysTimeIntervalOffset + hoursTimeIntervalOffset + secondsOffset)
     }
 
-    private lazy var quotes = [
+    private static var quotes = [
         "People say nothing is impossible, but I do nothing every day.",
         "The best thing about the future is that it comes one day at a time.",
         "The only mystery in life is why the kamikaze pilots wore helmets.",
@@ -154,4 +197,3 @@ class MockChatModel: ChatModelType {
         "I drink to make other people more interesting."
     ]
 }
-

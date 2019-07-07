@@ -32,8 +32,7 @@ class ChatViewController: BaseChatViewController {
         chatDataSource = dataSource
 
         setupBindings()
-        viewModel?.loadMessages()
-        viewModel?.loadUser()
+        viewModel?.loadData()
     }
 
     private func setupUI() {
@@ -68,7 +67,7 @@ class ChatViewController: BaseChatViewController {
     private func setupBindings() {
         guard let viewModel = viewModel else { return }
 
-        viewModel.messagesRelay.observeOn(MainScheduler.instance).bind { [weak self] (messages) in
+        viewModel.chatItemsRelay.observeOn(MainScheduler.instance).bind { [weak self] (messages) in
             self?.dataSource?.update(with: messages)
         }.disposed(by: disposeBag)
 
@@ -89,6 +88,7 @@ class ChatViewController: BaseChatViewController {
         var appearance = ChatInputBarAppearance()
         appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
         appearance.textInputAppearance.placeholderText = NSLocalizedString("Message", comment: "")
+        appearance.textInputAppearance.placeholderFont = UIFont.systemFont(ofSize: 18)
         appearance.textInputAppearance.font = UIFont.systemFont(ofSize: 18)
 
         self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView,
@@ -129,6 +129,7 @@ class ChatViewController: BaseChatViewController {
 
         return [Message.textMessageType: [TextMessagePresenterBuilder()],
                 Message.photoMessageType: [photoMessagePresenterBuilder],
+                Call.chatItemType: [CallPresenterBuilder()],
                 DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()],
                 TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
                 MessageStatusSeparatorModel.chatItemType: [MessageStatusPresenterBuilder()]]

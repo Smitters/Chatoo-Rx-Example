@@ -15,16 +15,16 @@ class ChatItemsDecorator: ChatItemsDecoratorProtocol {
         let calendar = Calendar.current
         var decoratedItems: [DecoratedChatItem] = []
 
-        if let firstMessage = chatItems.first as? Message {
+        if let firstMessage = chatItems.first as? TimedChatItem {
             let dateSeparator = DateSeparatorModel(uid: firstMessage.uid + "date_separator", date: firstMessage.time.dateString)
             decoratedItems.append(DecoratedChatItem(chatItem: dateSeparator, decorationAttributes: nil))
         }
 
         for (index, item) in chatItems.enumerated() {
-            guard let currentItem = item as? Message else { continue }
+            guard let currentItem = item as? TimedChatItem else { continue }
 
             // Top separators (Date)
-            if index > chatItems.startIndex, let previousItem = chatItems[index - 1] as? Message,
+            if index > chatItems.startIndex, let previousItem = chatItems[index - 1] as? TimedChatItem,
                !calendar.isDate(currentItem.time, inSameDayAs: previousItem.time) {
 
                 let dateSeparator = DateSeparatorModel(uid: currentItem.uid + "date_separator", date: currentItem.time.dateString)
@@ -34,15 +34,20 @@ class ChatItemsDecorator: ChatItemsDecoratorProtocol {
             decoratedItems.append(DecoratedChatItem(chatItem: item, decorationAttributes: nil))
 
             // Bottom separator (Time + Statuses)
+
+            guard let currentMessageItem = item as? Message else { continue }
+
             if index == chatItems.endIndex - 1{
-                decoratedItems.append(createBottomDecoratedItem(for: currentItem))
+                decoratedItems.append(createBottomDecoratedItem(for: currentMessageItem))
             } else if let nextItem = chatItems[index + 1] as? Message,
                           nextItem.senderId != currentItem.senderId ||
-                          currentItem.status == .error ||
-                          currentItem.status == .sending ||
+                          currentMessageItem.status == .error ||
+                          currentMessageItem.status == .sending ||
                           nextItem.time.timeIntervalSince(currentItem.time) > 60 {
 
-                    decoratedItems.append(createBottomDecoratedItem(for: currentItem))
+                    decoratedItems.append(createBottomDecoratedItem(for: currentMessageItem))
+            } else if chatItems[index + 1] is Call {
+                decoratedItems.append(createBottomDecoratedItem(for: currentMessageItem))
             }
         }
 

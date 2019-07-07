@@ -29,6 +29,10 @@
 		10C129EE22D21385000D781E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129ED22D21385000D781E /* HeaderView.swift */; };
 		10C129F022D21395000D781E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129EF22D21395000D781E /* HeaderView.xib */; };
 		10C129F322D21B2C000D781E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129F222D21B2C000D781E /* User.swift */; };
+		10C129F522D21FD9000D781E /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129F422D21FD9000D781E /* Call.swift */; };
+		10C129F822D226B1000D781E /* CallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129F622D226B1000D781E /* CallCollectionViewCell.swift */; };
+		10C129F922D226B1000D781E /* CallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129F722D226B1000D781E /* CallCollectionViewCell.xib */; };
+		10C129FC22D22D74000D781E /* CallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129FB22D22D74000D781E /* CallPresenter.swift */; };
 		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
 		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
 		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
@@ -76,6 +80,10 @@
 		10C129ED22D21385000D781E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		10C129EF22D21395000D781E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		10C129F222D21B2C000D781E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		10C129F422D21FD9000D781E /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		10C129F622D226B1000D781E /* CallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCollectionViewCell.swift; sourceTree = "<group>"; };
+		10C129F722D226B1000D781E /* CallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCollectionViewCell.xib; sourceTree = "<group>"; };
+		10C129FB22D22D74000D781E /* CallPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPresenter.swift; sourceTree = "<group>"; };
 		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 			children = (
 				10E288E922D05EE10094D434 /* TextMessagePresenter.swift */,
 				10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */,
+				10C129FB22D22D74000D781E /* CallPresenter.swift */,
 				10C129B922D11660000D781E /* DateSeparatorPresenter.swift */,
 				10C129D022D1AF31000D781E /* TimeSeparatorPresenter.swift */,
 				10C129D222D1B038000D781E /* MessageStatusPresenter.swift */,
@@ -197,6 +206,15 @@
 				10C129EF22D21395000D781E /* HeaderView.xib */,
 			);
 			path = ChatHeaderView;
+			sourceTree = "<group>";
+		};
+		10C129FA22D229E4000D781E /* CallCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				10C129F622D226B1000D781E /* CallCollectionViewCell.swift */,
+				10C129F722D226B1000D781E /* CallCollectionViewCell.xib */,
+			);
+			path = CallCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		10D3FF0922D1084F00616019 /* Views */ = {
@@ -272,6 +290,7 @@
 				10C129BF22D11A08000D781E /* DateSeparator */,
 				10C129CA22D12B78000D781E /* TimeSeparator */,
 				10C129CF22D12D07000D781E /* MessageStatus */,
+				10C129FA22D229E4000D781E /* CallCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -302,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				10E288F822D0A9DC0094D434 /* Message.swift */,
+				10C129F422D21FD9000D781E /* Call.swift */,
 				10C129C222D129F6000D781E /* DateSeparatorModel.swift */,
 				10C129C422D12A2E000D781E /* TimeSeparatorModel.swift */,
 				10C129D422D1B113000D781E /* MessageStatusSeparatorModel.swift */,
@@ -391,6 +411,7 @@
 				10E288E822D058790094D434 /* Colors.xcassets in Resources */,
 				10E288EF22D069830094D434 /* IncomingTextMessageCollectionViewCell.xib in Resources */,
 				10C129BE22D118B0000D781E /* DateSeparatorCollectionViewCell.xib in Resources */,
+				10C129F922D226B1000D781E /* CallCollectionViewCell.xib in Resources */,
 				10C129C922D12B62000D781E /* TimeSeparatorCollectionViewCell.xib in Resources */,
 				10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */,
 				10E288E622D053820094D434 /* LocalizedStrings.strings in Resources */,
@@ -467,11 +488,13 @@
 			files = (
 				10E288F522D098DD0094D434 /* ChatModel.swift in Sources */,
 				10D3FF0622D0FAA400616019 /* Colors.swift in Sources */,
+				10C129FC22D22D74000D781E /* CallPresenter.swift in Sources */,
 				10D3FF0822D106CB00616019 /* GradientView.swift in Sources */,
 				10C129C322D129F6000D781E /* DateSeparatorModel.swift in Sources */,
 				10E288CC22CF74980094D434 /* ChatViewController.swift in Sources */,
 				10C129F322D21B2C000D781E /* User.swift in Sources */,
 				10C129C822D12B62000D781E /* TimeSeparatorCollectionViewCell.swift in Sources */,
+				10C129F522D21FD9000D781E /* Call.swift in Sources */,
 				10E288EA22D05EE10094D434 /* TextMessagePresenter.swift in Sources */,
 				10C129D522D1B113000D781E /* MessageStatusSeparatorModel.swift in Sources */,
 				10E288F222D096470094D434 /* Coordinator.swift in Sources */,
@@ -490,6 +513,7 @@
 				10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */,
 				10C129E622D1DA73000D781E /* PhotoViewerController.swift in Sources */,
 				10C129CD22D12C32000D781E /* MessageStatusCollectionViewCell.swift in Sources */,
+				10C129F822D226B1000D781E /* CallCollectionViewCell.swift in Sources */,
 				10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */,
 				10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */,
 				10C129D122D1AF31000D781E /* TimeSeparatorPresenter.swift in Sources */,

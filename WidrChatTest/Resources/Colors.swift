@@ -13,4 +13,7 @@ enum Colors {
     static let darkBlue = UIColor(named: "darkBlue")!
     static let lightGray = UIColor(named: "lightGray")!
     static let veryLightBlue = UIColor(named: "veryLightBlue")!
+    static let brownGrey = UIColor(named: "brownGrey")!
+    static let paleTurquoise = UIColor(named: "paleTurquoise")!
+    static let lightPeach = UIColor(named: "lightPeach")!
 }

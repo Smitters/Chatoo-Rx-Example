@@ -8,14 +8,19 @@
 
 import Chatto
 
-class Message: ChatItemProtocol {
+protocol TimedChatItem: ChatItemProtocol {
+    var time: Date { get }
+    var senderId: UUID { get }
+}
+
+class Message: TimedChatItem {
     let uid: String
     let content: Content
     let senderId: UUID
     let isIncoming: Bool
+    let time: Date
 
     var status: Status
-    var time: Date
 
     init(uid: String = UUID().uuidString, content: Content, status: Status, senderId: UUID, isIncoming: Bool, time: Date = Date()) {
         self.uid = uid
