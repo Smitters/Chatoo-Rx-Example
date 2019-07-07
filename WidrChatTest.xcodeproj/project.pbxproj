@@ -19,6 +19,10 @@
 		10C129D122D1AF31000D781E /* TimeSeparatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129D022D1AF31000D781E /* TimeSeparatorPresenter.swift */; };
 		10C129D322D1B038000D781E /* MessageStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129D222D1B038000D781E /* MessageStatusPresenter.swift */; };
 		10C129D522D1B113000D781E /* MessageStatusSeparatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129D422D1B113000D781E /* MessageStatusSeparatorModel.swift */; };
+		10C129DB22D1BFD7000D781E /* IncomingPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129DA22D1BFD7000D781E /* IncomingPhotoCollectionViewCell.xib */; };
+		10C129DF22D1C05E000D781E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129DD22D1C05E000D781E /* PhotoCollectionViewCell.swift */; };
+		10C129E022D1C05E000D781E /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C129DE22D1C05E000D781E /* PhotoCollectionViewCell.xib */; };
+		10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */; };
 		10D3FF0322D0F9E900616019 /* TextMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */; };
 		10D3FF0622D0FAA400616019 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0522D0FAA400616019 /* Colors.swift */; };
 		10D3FF0822D106CB00616019 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3FF0722D106CB00616019 /* GradientView.swift */; };
@@ -56,6 +60,10 @@
 		10C129D022D1AF31000D781E /* TimeSeparatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeparatorPresenter.swift; sourceTree = "<group>"; };
 		10C129D222D1B038000D781E /* MessageStatusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusPresenter.swift; sourceTree = "<group>"; };
 		10C129D422D1B113000D781E /* MessageStatusSeparatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusSeparatorModel.swift; sourceTree = "<group>"; };
+		10C129DA22D1BFD7000D781E /* IncomingPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		10C129DD22D1C05E000D781E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		10C129DE22D1C05E000D781E /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessagePresenter.swift; sourceTree = "<group>"; };
 		10D3FF0122D0F9E900616019 /* TextMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D3FF0522D0FAA400616019 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		10D3FF0722D106CB00616019 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				10E288E922D05EE10094D434 /* TextMessagePresenter.swift */,
+				10C129E122D1C0A2000D781E /* PhotoMessagePresenter.swift */,
 				10C129B922D11660000D781E /* DateSeparatorPresenter.swift */,
 				10C129D022D1AF31000D781E /* TimeSeparatorPresenter.swift */,
 				10C129D222D1B038000D781E /* MessageStatusPresenter.swift */,
@@ -138,6 +147,16 @@
 				10C129CC22D12C32000D781E /* MessageStatusCollectionViewCell.xib */,
 			);
 			path = MessageStatus;
+			sourceTree = "<group>";
+		};
+		10C129DC22D1C03C000D781E /* PhotoMessage */ = {
+			isa = PBXGroup;
+			children = (
+				10C129DD22D1C05E000D781E /* PhotoCollectionViewCell.swift */,
+				10C129DE22D1C05E000D781E /* PhotoCollectionViewCell.xib */,
+				10C129DA22D1BFD7000D781E /* IncomingPhotoCollectionViewCell.xib */,
+			);
+			path = PhotoMessage;
 			sourceTree = "<group>";
 		};
 		10D3FF0922D1084F00616019 /* Views */ = {
@@ -207,6 +226,7 @@
 		10E288EB22D069520094D434 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				10C129DC22D1C03C000D781E /* PhotoMessage */,
 				10E288F022D069900094D434 /* TextMessage */,
 				10C129BF22D11A08000D781E /* DateSeparator */,
 				10C129CA22D12B78000D781E /* TimeSeparator */,
@@ -333,6 +353,8 @@
 				10E288E622D053820094D434 /* LocalizedStrings.strings in Resources */,
 				10E288D722CF749A0094D434 /* LaunchScreen.storyboard in Resources */,
 				10E288D422CF749A0094D434 /* Assets.xcassets in Resources */,
+				10C129E022D1C05E000D781E /* PhotoCollectionViewCell.xib in Resources */,
+				10C129DB22D1BFD7000D781E /* IncomingPhotoCollectionViewCell.xib in Resources */,
 				10C129CE22D12C32000D781E /* MessageStatusCollectionViewCell.xib in Resources */,
 				10E288CF22CF74980094D434 /* Main.storyboard in Resources */,
 			);
@@ -409,6 +431,7 @@
 				10E288EA22D05EE10094D434 /* TextMessagePresenter.swift in Sources */,
 				10C129D522D1B113000D781E /* MessageStatusSeparatorModel.swift in Sources */,
 				10E288F222D096470094D434 /* Coordinator.swift in Sources */,
+				10C129DF22D1C05E000D781E /* PhotoCollectionViewCell.swift in Sources */,
 				10C129C522D12A2E000D781E /* TimeSeparatorModel.swift in Sources */,
 				10E288E422CFA0160094D434 /* ChatDataSource.swift in Sources */,
 				10C129D322D1B038000D781E /* MessageStatusPresenter.swift in Sources */,
@@ -420,6 +443,7 @@
 				10C129BD22D118B0000D781E /* DateSeparatorCollectionViewCell.swift in Sources */,
 				10E288FB22D0ABFC0094D434 /* ChatViewModel.swift in Sources */,
 				10C129CD22D12C32000D781E /* MessageStatusCollectionViewCell.swift in Sources */,
+				10C129E222D1C0A2000D781E /* PhotoMessagePresenter.swift in Sources */,
 				10E288EE22D069830094D434 /* IncomingTextMessageCollectionViewCell.swift in Sources */,
 				10C129D122D1AF31000D781E /* TimeSeparatorPresenter.swift in Sources */,
 			);

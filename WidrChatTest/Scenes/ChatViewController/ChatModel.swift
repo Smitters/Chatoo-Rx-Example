@@ -54,11 +54,11 @@ class MockChatModel: ChatModelType {
         // Simulate async message sending with different message statuses
         let isErrorOccured = ((1...10).randomElement() ?? 0) > 9  // 10% to the error
         if isErrorOccured {
-            updateMessage(message, with: .error, afterDelay: 0.5)
+            updateMessage(message, with: .error, afterDelay: 0.75)
         } else {
-            updateMessage(message, with: .sent, afterDelay: 0.5)
-            updateMessage(message, with: .delivered, afterDelay: 1)
-            updateMessage(message, with: .read, afterDelay: 1.5)
+            updateMessage(message, with: .sent, afterDelay: 0.75)
+            updateMessage(message, with: .delivered, afterDelay: 1.5)
+            updateMessage(message, with: .read, afterDelay: 2.5)
         }
     }
 
@@ -75,16 +75,27 @@ class MockChatModel: ChatModelType {
     private let otherUserId = UUID()
 
     private func generateRandomMessage() -> Message {
-        let content = Message.Content.text(quotes.randomElement() ?? "")
         let isMyMessage = Bool.random()
         let senderId = isMyMessage ? currentUserId : otherUserId
         let time = generateRandomTime()
 
+        let isTextMessage = ((1...10).randomElement() ?? 0) < 9  // 90% will be text messages
+        let content: Message.Content
+        if isTextMessage {
+            content = Message.Content.text(quotes.randomElement() ?? "")
+        } else {
+            content = Message.Content.photo(getRandomPhoto())
+        }
         return Message(content: content,
                        status: .read,
                        senderId: senderId,
                        isIncoming: !isMyMessage,
                        time: time)
+    }
+
+    private func getRandomPhoto() -> UIImage {
+        return Bool.random() ? UIImage(imageLiteralResourceName: "horizontal_example") :
+                               UIImage(imageLiteralResourceName: "vertical_example")
     }
 
     private func generateRandomTime() -> Date {

@@ -90,6 +90,7 @@ class ChatViewController: BaseChatViewController {
 
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
         return [Message.textMessageType: [TextMessagePresenterBuilder()],
+                Message.photoMessageType: [PhotoMessagePresenterBuilder()],
                 DateSeparatorModel.chatItemType: [DateSeparatorPresenterBuilder()],
                 TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
                 MessageStatusSeparatorModel.chatItemType: [MessageStatusPresenterBuilder()]]
