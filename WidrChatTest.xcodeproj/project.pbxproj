@@ -215,15 +215,14 @@
 			children = (
 				10E288C922CF74980094D434 /* AppDelegate.swift */,
 				10E288F122D096470094D434 /* Coordinator.swift */,
-				10E288F722D0A9C00094D434 /* Models */,
+				10E288F722D0A9C00094D434 /* DataModels */,
 				10C129C122D129B4000D781E /* Presenters */,
 				10E288E022CF9EB70094D434 /* Scenes */,
 				10D3FF0922D1084F00616019 /* Views */,
 				10E288EB22D069520094D434 /* Cells */,
 				10C129C022D129A0000D781E /* Extensions */,
-				10E288E222CF9EDB0094D434 /* Resources */,
 				10C129EA22D1E5DD000D781E /* Storyboards */,
-				10E288D822CF749A0094D434 /* Info.plist */,
+				10E288E222CF9EDB0094D434 /* Resources */,
 			);
 			path = WidrChatTest;
 			sourceTree = "<group>";
@@ -243,6 +242,7 @@
 				10E288D322CF749A0094D434 /* Assets.xcassets */,
 				10E288E722D058790094D434 /* Colors.xcassets */,
 				10D3FF0522D0FAA400616019 /* Colors.swift */,
+				10E288D822CF749A0094D434 /* Info.plist */,
 				10E288E522D053820094D434 /* LocalizedStrings.strings */,
 			);
 			path = Resources;
@@ -282,7 +282,7 @@
 			path = ChatView;
 			sourceTree = "<group>";
 		};
-		10E288F722D0A9C00094D434 /* Models */ = {
+		10E288F722D0A9C00094D434 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
 				10E288F822D0A9DC0094D434 /* Message.swift */,
@@ -290,7 +290,7 @@
 				10C129C422D12A2E000D781E /* TimeSeparatorModel.swift */,
 				10C129D422D1B113000D781E /* MessageStatusSeparatorModel.swift */,
 			);
-			path = Models;
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		49124433FB4F045397B1C17C /* Frameworks */ = {
@@ -622,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35RWD3B7ZL;
-				INFOPLIST_FILE = WidrChatTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WidrChatTest/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35RWD3B7ZL;
-				INFOPLIST_FILE = WidrChatTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WidrChatTest/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

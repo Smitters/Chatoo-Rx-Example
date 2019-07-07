@@ -38,7 +38,6 @@ class ChatViewController: BaseChatViewController {
 
         viewModel.messagesRelay.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] (messages) in
             self?.dataSource?.update(with: messages)
-
         }).disposed(by: disposeBag)
     }
 
