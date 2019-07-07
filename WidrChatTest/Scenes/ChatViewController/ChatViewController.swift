@@ -8,7 +8,6 @@
 
 import Chatto
 import ChattoAdditions
-import RxCocoa
 import RxSwift
 import UIKit
 

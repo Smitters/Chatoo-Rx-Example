@@ -28,7 +28,17 @@ class GradientView: UIView {
         }
     }
 
-    override func layoutSubviews() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureGradient()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configureGradient()
+    }
+
+    private func configureGradient() {
         gradientLayer = self.layer as? CAGradientLayer
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
